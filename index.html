@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-tasks"></i> Mi Lista de Tareas</h1>
+            <p>Organiza tu día de forma productiva</p>
+        </header>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="tarea-input" placeholder="Escribe una nueva tarea...">
+                <button id="agregar-btn">
+                    <i class="fas fa-plus"></i> Agregar
+                </button>
+            </div>
+        </div>
+
+        <div class="filtros">
+            <button class="filtro-btn active" data-filtro="todas">Todas</button>
+            <button class="filtro-btn" data-filtro="pendientes">Pendientes</button>
+            <button class="filtro-btn" data-filtro="completadas">Completadas</button>
+        </div>
+
+        <div class="estadisticas">
+            <span id="total-tareas">Total: 0</span>
+            <span id="tareas-pendientes">Pendientes: 0</span>
+            <span id="tareas-completadas">Completadas: 0</span>
+        </div>
+
+        <ul id="lista-tareas">
+            <li class="vacio">No hay tareas agregadas. ¡Agrega tu primera tarea!</li>
+        </ul>
+
+        <div class="acciones">
+            <button id="limpiar-btn" class="btn-secundario">
+                <i class="fas fa-trash"></i> Limpiar completadas
+            </button>
+            <button id="guardar-btn" class="btn-primario">
+                <i class="fas fa-save"></i> Guardar lista
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
